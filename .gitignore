@@ -11,17 +11,18 @@
 logs/
 
 # IDEs and Build Tools
-.idea/                  # IntelliJ IDEA
-.vscode/                # VS Code
-.project                # Eclipse
-.classpath              # Eclipse
-.settings/              # Eclipse
-target/                 # Maven build directory
-build/                  # Gradle build directory
+.idea/
+.vscode/
+.project
+.classpath
+.settings/
+target/
+build/
+out/
 
 # Local settings
 .gradle/
-*.iml                   # IntelliJ IDEA module files
+*.iml
 *.ipr
 *.iws
 
@@ -31,9 +32,3 @@ Thumbs.db
 
 # Environment variables
 .env
-
-# Spring Boot specific
-# application.properties 파일은 민감 정보(API 키)를 포함할 수 있으므로 Git에서 제외합니다.
-# API 키는 환경 변수로 관리하는 것을 권장합니다.
-#/src/main/resources/application*.properties
-#/src/main/resources/application*.yml
