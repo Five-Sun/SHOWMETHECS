@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOWMETHECS - 학습 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .ai-response {
+            border: 1px solid #ddd;
+            padding: 15px;
+            min-height: 200px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+        }
+        .ai-response h2 {
+            margin-top: 0;
+        }
+        .button-container {
+            width: 100%;
+            max-width: 800px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .logout-btn {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+<div class="button-container">
+    <form th:action="@{/logout}" method="post">
+        <button class="logout-btn" type="submit">로그아웃</button>
+    </form>
+</div>
+<div class="container">
+    <h1>Gemini AI 학습 페이지</h1>
+    <div class="ai-response" th:if="${answer}">
+        <h2 style="color: #007bff;">AI의 답변</h2>
+        <p th:text="${answer}"></p>
+    </div>
+    <div th:unless="${answer}">
+        <p>카테고리를 선택하여 학습을 시작하세요!</p>
+    </div>
+</div>
+</body>
+</html>
