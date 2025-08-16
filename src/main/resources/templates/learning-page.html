@@ -44,24 +44,32 @@
             text-align: right;
             margin-bottom: 10px;
         }
-        .logout-btn {
+        .logout-btn, .action-btn {
             padding: 10px 20px;
-            background-color: #dc3545;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            margin-left: 10px;
         }
-        .logout-btn:hover {
-            background-color: #c82333;
+        .logout-btn:hover, .action-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 <div class="button-container">
-    <form th:action="@{/logout}" method="post">
+    <form th:action="@{/logout}" method="post" style="display: inline-block;">
         <button class="logout-btn" type="submit">로그아웃</button>
+    </form>
+    <form th:action="@{/learning-summary}" method="get" style="display: inline-block;">
+        <input type="hidden" th:name="category" th:value="${session.category}" />
+        <button class="action-btn" type="submit">다음 주제</button>
+    </form>
+    <form th:action="@{/learning-detail}" method="get" style="display: inline-block;">
+        <button class="action-btn" type="submit">준비 완료</button>
     </form>
 </div>
 <div class="container">

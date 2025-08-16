@@ -21,6 +21,7 @@ spring:
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
 
-# Gemini API 설정
-gemini:
+# Gemini 설정
+google:
   api-key: ${GOOGLE_API_KEY}
+  model: models/gemini-1.5-flash-latest
