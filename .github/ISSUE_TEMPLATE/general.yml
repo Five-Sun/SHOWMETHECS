@@ -23,15 +23,6 @@ body:
         - 참고 자료
 
   - type: textarea
-    id: todo
-    attributes:
-      label: 할 일 (TODO)
-      description: 체크리스트 형식으로 작성하세요
-      value: |
-        - [ ] 할 일 1
-        - [ ] 할 일 2
-
-  - type: textarea
     id: etc
     attributes:
       label: 비고
