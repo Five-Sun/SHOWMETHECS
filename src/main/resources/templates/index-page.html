@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOWMETHECS - 시작하기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+<div class="container text-center my-auto">
+    <h1 class="display-4 fw-bold text-primary">SHOWMETHECS</h1>
+    <p class="lead mb-4">CS · Java · Spring 학습을 위한 나만의 기록 공간</p>
+    <a th:href="@{/oauth2/authorization/kakao}" class="btn btn-warning btn-lg">카카오로 로그인</a>
+</div>
+<footer class="text-center text-muted mt-auto mb-3">
+    © 2025 SHOWMETHECS
+</footer>
+</body>
+</html>

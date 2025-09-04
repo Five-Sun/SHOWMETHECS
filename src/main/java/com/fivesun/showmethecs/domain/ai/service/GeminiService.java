@@ -1,9 +1,8 @@
-package com.fivesun.showmethecs.service;
+package com.fivesun.showmethecs.domain.ai.service;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentConfig;
 import com.google.genai.types.GenerateContentResponse;
-import com.google.genai.types.GenerationConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

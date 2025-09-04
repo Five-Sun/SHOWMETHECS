@@ -1,7 +1,7 @@
-package com.fivesun.showmethecs.controller;
+package com.fivesun.showmethecs.domain.ai.controller;
 
-import com.fivesun.showmethecs.service.GeminiService;
-import com.fivesun.showmethecs.service.PromptLoaderService;
+import com.fivesun.showmethecs.domain.ai.service.GeminiService;
+import com.fivesun.showmethecs.domain.ai.service.PromptLoaderService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
